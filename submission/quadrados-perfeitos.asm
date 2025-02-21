@@ -1,19 +1,17 @@
 @ /0000
 SC /A10
 HM /002
+
 @ /0A10
 JP /000
 
 LD RES ; pego resultado e adiciona contador
 AD CONT
 MM RES
-
-LD LOCAL ; defino o local
+SALVAR MM LOCAL
+LD SALVAR
 AD POS
-MM LOCAL
-
-LD RES ; armazenado o resultado no local
-MM LOCAL
+MM SALVAR 
 
 LD CONT ; incremento contador
 AD POS
@@ -27,15 +25,17 @@ JP /A12
 
 @ /B02
 RS /A10
+
 @ /0100
 K /0000
+LOCAL K /0000
+
 
 @ /0006
 K /0001
 
 CONT K /0001
 POS K /0002
-LOCAL K /0100
 
 @ /0FF0
 N K /003F
