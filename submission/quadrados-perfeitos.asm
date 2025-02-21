@@ -8,6 +8,7 @@ JP /000
 LD RES ; pego resultado e adiciona contador
 AD CONT
 MM RES
+
 SALVAR MM LOCAL
 LD SALVAR
 AD POS
